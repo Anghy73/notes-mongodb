@@ -1,2 +1,2 @@
 # notes-mongodb
-practice mongodb
+mongodb practice with fazt course
