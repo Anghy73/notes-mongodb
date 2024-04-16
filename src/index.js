@@ -1,5 +1,4 @@
 require('dotenv').config()
-console.log(process.env.PORT);
 
 const app = require('./server')
 const UserModel = require('./database')
