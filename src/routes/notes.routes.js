@@ -10,9 +10,9 @@ const {
   deleteNote,
 } = require("../controllers/notes.controler");
 
-router.get("/note/add", renderNoteForm);
+router.get("/notes/add", renderNoteForm);
 
-router.post("/note/add", createNewNote);
+router.post("/notes/new-note", createNewNote);
 
 router.get("/notes", renderNotes);
 
