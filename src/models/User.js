@@ -6,13 +6,13 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
 }, {
   timestamps: true
 })
 
-UserSchema.methods.encrypPassword = async password => {
+UserSchema.methods.encryptPassword = async password => {
   const salt = await bcryptjs.genSalt(10)
   const hash = await bcryptjs.hash(password, salt)
   return hash
